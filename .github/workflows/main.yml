@@ -1,0 +1,20 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Execute init script
+        run: ${{ github.workspace }}/scripts/init
+      - run: echo "This job's status is ${{ job.status }}."
+

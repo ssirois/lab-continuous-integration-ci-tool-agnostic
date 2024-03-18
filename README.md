@@ -26,3 +26,19 @@ The build process will be launch from three different context:
 - all contexts can manage containers one way or another
 - all contexts can execute shell scripts
 
+## Exploration Results
+
+### Environment Initialization
+
+`./scripts/init` shell script builds a Docker image that serves
+as a reproducible environment where a single point of truth for all
+dependencies is recorded in the `Dockerfile`.
+
+A job has been defined for [GitLab CI](./.gitlab-ci.yml) and
+[GitHub Actions](./.github/workflows/main.yml).
+
+It can also be called from a personal workstation:
+
+```terminal
+$ ./scripts/init
+```

@@ -1,0 +1,14 @@
+stages:
+  - build
+
+Build Java application:
+  stage: build
+  services:
+    - docker:dind
+  image: docker:dind
+  tags:
+    - docker
+  before_script:
+    - ./scripts/init
+  script:
+    - 'echo "wip: build java application"'

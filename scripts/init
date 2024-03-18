@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+PROJECT_ROOT="$(git rev-parse --show-toplevel)"
+PROJECT_NAME="$(basename ""$PROJECT_ROOT"")"
+
+docker build \
+  --tag "$PROJECT_NAME" \
+  .
