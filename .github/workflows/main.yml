@@ -16,5 +16,6 @@ jobs:
           ls ${{ github.workspace }}
       - name: Execute init script
         run: ${{ github.workspace }}/scripts/init
-      - run: echo "This job's status is ${{ job.status }}."
+      - name: Build Java application
+        run: ${{ github.workspace }}/scripts/build
 

@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+PROJECT_ROOT="$(git rev-parse --show-toplevel)"
+PROJECT_NAME="$(basename ""$PROJECT_ROOT"")"
+
+docker container run \
+  --volume $(pwd):/tmp/project:rw \
+  --workdir /tmp/project/my-app \
+  --user $UID:$UID \
+  --rm \
+  "$PROJECT_NAME" \
+  mvn package

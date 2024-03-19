@@ -11,4 +11,4 @@ Build Java application:
   before_script:
     - ./scripts/init
   script:
-    - 'echo "wip: build java application"'
+    - ./scripts/build

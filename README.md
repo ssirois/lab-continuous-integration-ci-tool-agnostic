@@ -42,3 +42,18 @@ It can also be called from a personal workstation:
 ```terminal
 $ ./scripts/init
 ```
+
+### Build the Java Application
+
+`./scripts/build` shell script starts the build process for the
+Java application sources from within the environment created by the
+`./scripts/init` shell script described above.
+
+A job has been defined for [GitLab CI](./.gitlab-ci.yml) and
+[GitHub Actions](./.github/workflows/main.yml).
+
+It can also be called from a personal workstation:
+
+```terminal
+$ ./scripts/build
+```
